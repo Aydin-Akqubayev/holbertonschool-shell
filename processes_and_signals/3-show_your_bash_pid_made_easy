@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Show bash PID without using ps
+a=($(pgrep bash))
+length=${#a}
+for ((i=0;i<=length;i++)); do
+	echo "${a[$i]} bash"
+
+
+done
