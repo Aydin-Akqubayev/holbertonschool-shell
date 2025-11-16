@@ -4,12 +4,12 @@ if [[ $1 == "start" ]]; then
 	./manage_my_process &
 	echo "manage_my_process started"
 elif [[ $1 == "stop" ]]; then
-	kill -9 $(cat /var/run/my_process.pid)
+	kill -9 "$(cat /var/run/my_process.pid)"
 	rm -rf /var/run/my_process.pid
 	echo "manage_my_process stopped"
 	
 elif [[ $1 == "restart" ]]; then
-	kill -9 $(cat /var/run/my_process.pid)
+	kill -9 "$(cat /var/run/my_process.pid)"
 	rm -rf /var/run/my_process.pid
 	./manage_my_process &
 	echo "manage_my_process restarted"
