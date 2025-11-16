@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-f = open("text_python")
-print(f.read())
+with open("text_python") as f:
+    print(f.read()[:-1])
